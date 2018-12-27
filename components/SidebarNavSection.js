@@ -5,7 +5,7 @@ const SidebarNavSection = props => (
         <h3>{props.title}</h3>
         <ul>
             {props.links.map((link) => (
-                <SidebarLink key={link.id} link={link.url} title={link.text} />
+                <SidebarLink key={link.id} link={link.href} title={link.text} />
             ))}
         </ul>
     </div>

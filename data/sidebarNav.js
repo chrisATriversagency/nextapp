@@ -4,12 +4,12 @@ const sidebarNav = [
         id: 1,
         "links": [
             {
-                "url": "/system-overview",
+                "href": "/system-overview",
                 "text": "System Overview",
                 id: 1,
             },
             {
-                "url": "/preparing-for-success",
+                "href": "/preparing-for-success",
                 "text": "Preparing for Success",
                 id: 2,
             }
@@ -20,12 +20,12 @@ const sidebarNav = [
         id: 2,
         "links": [
             {
-                "url": "/resources",
+                "href": "/resources",
                 "text": "Resources",
                 id: 3,
             },
             {
-                "url": "/support",
+                "href": "/support",
                 "text": "Support",
                 id: 4,
             },
@@ -36,12 +36,12 @@ const sidebarNav = [
         id: 3,
         "links": [
             {
-                "url": "/profile",
+                "href": "/profile",
                 "text": "Profile",
                 id: 5,
             },
             {
-                "url": "/log-out",
+                "href": "/log-out",
                 "text": "Log Out",
                 id: 6,
             },

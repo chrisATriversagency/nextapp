@@ -1,11 +1,11 @@
-import Layout from '../components/Layout'
-import StepLink from '../components/StepLink'
+import Layout from '../components/Layout';
+import StepLink from '../components/StepLink';
 
-import Link from 'next/link'
+import Link from 'next/link';
 
-import steps from '../data/steps'
+import steps from '../data/steps';
 
-function SystemOverview() {
+const SystemOverview = (props) => (
 
     return (
         <Layout>
@@ -21,6 +21,6 @@ function SystemOverview() {
             </ul>
         </Layout>
     )
-}
+);
 
-export default SystemOverview
+export default SystemOverview;
