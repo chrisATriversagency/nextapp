@@ -1,6 +1,6 @@
 import SidebarClinic from './SidebarClinic';
 
-import sidebarClinics from '../data/sidebarClinics';
+import sidebarClinics from '../../data/sidebarClinics';
 
 const SidebarClinicList = () => (
     <div>

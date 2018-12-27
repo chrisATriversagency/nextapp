@@ -4,7 +4,7 @@ import SidebarClinicList  from './SidebarClinicList';
 
 import Link from 'next/link';
 
-import sidebarNav from '../data/sidebarNav';
+import sidebarNav from '../../data/sidebarNav';
 
 const Sidebar = (props) => (
     <aside className="loggedin-sidebar">
