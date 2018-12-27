@@ -16,7 +16,7 @@ const SystemOverview = (props) => (
                     <StepLink
                         step={step}
                         key={step.number}
-                        />
+                    />
                 ))}
             </ul>
         </Layout>
