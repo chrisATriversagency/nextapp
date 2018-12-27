@@ -1,7 +1,9 @@
-import Header from './Header'
+import Header from './Header';
+import Sidebar from './Sidebar';
 
 const Layout = props => (
     <div>
+        <Sidebar />
         <Header />
         {props.children}
     </div>
