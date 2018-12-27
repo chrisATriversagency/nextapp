@@ -1,10 +1,10 @@
 import Header from '../components/Header'
+import Layout from '../components/Layout'
 
 const Support = () => (
-    <div>
-        <Header />
-        <p>This is the Support Page</p>
-    </div>
+    <Layout>
+        <p>This is the support page</p>
+    </Layout>
 )
 
 export default Support
