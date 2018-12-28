@@ -1,9 +1,15 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import SocialList from './SocialList';
 
 import socialLinks from '../data/socialLinks';
 
 const Footer = () => (
-    <footer className="signup-footer">
+    <footer
+        css={{
+            gridArea: 'footer'
+        }}
+    >
         <div className="signup-footer__side signup-footer__side--one">
             <div className="signup-footer__side-item">
                 <SocialList links={socialLinks} />

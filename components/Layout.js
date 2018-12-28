@@ -1,16 +1,23 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
+import PageWrapper from './PageWrapper';
 import Header from './Header';
 import Sidebar from './sidebar/Sidebar';
 import Footer from './Footer';
 
 const Layout = props => (
-    <div>
+    <PageWrapper>
         <Sidebar />
         <Header />
-        <main>
+        <main
+            css={{
+                gridArea: 'content'
+            }}
+        >
             {props.children}
         </main>
         <Footer />
-    </div>
+    </PageWrapper>
 )
 
 export default Layout

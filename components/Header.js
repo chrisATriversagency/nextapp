@@ -1,7 +1,13 @@
-import Link from 'next/link'
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
+import Link from 'next/link';
 
 const Header = () => (
-    <header>
+    <header
+        css={{
+            gridArea: 'header'
+        }}
+    >
         <Link href="/">
           <a>Main Site</a>
         </Link>
@@ -14,4 +20,4 @@ const Header = () => (
     </header>
 )
 
-export default Header
+export default Header;
