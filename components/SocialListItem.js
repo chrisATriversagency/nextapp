@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 
+import Icon from './Icon';
+
 const SocialListItem = props => (
     <li>
         <a href={props.link}>
-            <i>{props.icon}</i>
+            <Icon icon={props.icon} />
         </a>
     </li>
 );
