@@ -12,6 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@emotion/core": "^10.0.5",
+    "@emotion/styled": "^10.0.5",
+    "emotion-theming": "^10.0.5",
     "express": "^4.16.4",
     "icomoon-react": "^0.1.16",
     "next": "^7.0.2",

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 const Header = () => (
-    <div>
+    <header>
         <Link href="/">
           <a>Main Site</a>
         </Link>
@@ -11,7 +11,7 @@ const Header = () => (
         <Link href="/logout">
           <a>Log Out</a>
         </Link>
-    </div>
+    </header>
 )
 
 export default Header
