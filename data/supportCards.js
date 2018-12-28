@@ -11,7 +11,7 @@ const supportCards = [
         icon: "/static/images/icons/question-mark.svg",
         title: "FAQs",
         copy: "Cras quis nulla commodo, aliquam lectus sed, blandit",
-        link: "/",
+        link: "/faqs",
         buttonText: "See More",
         id: 2,
     },

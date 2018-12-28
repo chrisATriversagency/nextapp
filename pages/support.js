@@ -1,4 +1,3 @@
-import Header from '../components/Header';
 import Layout from '../components/Layout';
 import PageTitle from '../components/PageTitle';
 import Card from '../components/Card';
