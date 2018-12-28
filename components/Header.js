@@ -3,13 +3,13 @@ import Link from 'next/link'
 const Header = () => (
     <div>
         <Link href="/">
-          <a>Home</a>
+          <a>Main Site</a>
         </Link>
-        <Link href="/support">
-          <a>Support</a>
+        <Link href="/search">
+          <a>Search</a>
         </Link>
-        <Link href="/system-overview">
-          <a>System Overview</a>
+        <Link href="/logout">
+          <a>Log Out</a>
         </Link>
     </div>
 )
