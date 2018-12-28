@@ -1,6 +1,7 @@
 // https://alligator.io/react/react-accordion-component/
 
 import PropTypes from 'prop-types';
+import AnimateHeight from 'react-animate-height';
 
 class AccordionSection extends React.Component {
     static propTypes = {
@@ -10,6 +11,13 @@ class AccordionSection extends React.Component {
         onClick: PropTypes.func.isRequired,
         id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
     };
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            height: 0,
+        };
+    }
 
     onClick = () => {
         this.props.onClick(this.props.id);
@@ -26,11 +34,14 @@ class AccordionSection extends React.Component {
                 <div onClick={onClick}>
                     {label}
                 </div>
-                {isOpen && (
+                <AnimateHeight
+                    duration={ 500 }
+                    height={ isOpen ? 'auto' : 0 }
+                >
                     <div>
                         {this.props.children}
                     </div>
-                )}
+                </AnimateHeight>
             </div>
         )
     }
