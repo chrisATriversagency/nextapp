@@ -7,6 +7,7 @@ const PageWrapper = styled.div({
     gridTemplateAreas: `"sidebar header"
                         "sidebar content"
                         "sidebar footer"`,
+    height: '100%',
 });
 
 export default PageWrapper;

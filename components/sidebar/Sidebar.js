@@ -1,20 +1,22 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx, css } from '@emotion/core';
 import Link from 'next/link';
 
 import SidebarNavSection from './SidebarNavSection';
 import User from './User';
 import SidebarClinicList  from './SidebarClinicList';
-
+import { colors } from '../../utils/ThemeUtils';
 
 import sidebarNav from '../../data/sidebarNav';
 
 
 const Sidebar = (props) => (
     <aside
-        css={{
-            gridArea: 'sidebar '
-        }}
+        css={css`
+            grid-area: sidebar;
+            background-color: ${colors.white};
+            box-shadow: ${colors.boxShadow};
+        `}
     >
         <div className="mobile-toggle">
             <i className="icon-hamburger"></i>

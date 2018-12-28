@@ -1,8 +1,22 @@
+/** @jsx jsx */
+import { jsx, css } from '@emotion/core';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import { colors } from '../utils/ThemeUtils';
 
 const Card = (props) => (
-    <article>
+    <article
+        css={css`
+            background-color: $white;
+            border-radius: 4px;
+            text-align: center;
+            border: 1px solid ${colors.borderGrey};
+            border-top: 7px solid ${colors.purple};
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+        `}
+    >
         <Link href={props.info.link}>
             <a>
                 <div>

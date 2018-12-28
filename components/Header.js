@@ -1,12 +1,18 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx, css } from '@emotion/core';
 import Link from 'next/link';
+import { colors } from '../utils/ThemeUtils';
 
 const Header = () => (
     <header
-        css={{
-            gridArea: 'header'
-        }}
+        css={css`
+            grid-area: header;
+            background-image: ${colors.headerGradient};
+            padding: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        `}
     >
         <Link href="/">
           <a>Main Site</a>
