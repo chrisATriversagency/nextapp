@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const User = (props) => (
     <div>
         <div>
@@ -6,10 +8,12 @@ const User = (props) => (
         <div>
             {props.currentClinic}
         </div>
-        <div>
-            {props.date}
-        </div>
     </div>
 );
+
+User.propTypes = {
+    userName: PropTypes.string,
+    currentClinic: PropTypes.string,
+};
 
 export default User;

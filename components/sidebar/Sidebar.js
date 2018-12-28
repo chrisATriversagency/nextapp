@@ -22,7 +22,7 @@ const Sidebar = (props) => (
             </header>
             <div className="loggedin-sidebar__content">
                 <div className="loggedin-sidebar__user-wrapper">
-                    <User userName="Thomas Johnson" currentClinic="Hope Valley Medical" date="08/08/2018" />
+                    <User userName="Thomas Johnson" currentClinic="Hope Valley Medical" />
                     <SidebarClinicList />
                 </div>
                 {sidebarNav.map((section) => (

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Link from 'next/link';
 
 const SidebarLink = (props) => (
@@ -10,5 +11,10 @@ const SidebarLink = (props) => (
     </li>
 
 );
+
+SidebarLink.propTypes = {
+    link: PropTypes.string,
+    title: PropTypes.string
+}
 
 export default SidebarLink;

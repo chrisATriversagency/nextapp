@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const SidebarClinic = (props) => (
     <li>
         <a>
@@ -5,5 +7,9 @@ const SidebarClinic = (props) => (
         </a>
     </li>
 )
+
+SidebarClinic.propTypes = {
+    name: PropTypes.string
+}
 
 export default SidebarClinic;

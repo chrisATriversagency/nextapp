@@ -16,4 +16,5 @@ const SidebarClinicList = () => (
         </ul>
     </div>
 )
+
  export default SidebarClinicList;
