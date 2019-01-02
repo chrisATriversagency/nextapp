@@ -17,6 +17,7 @@ class PageWrapper extends React.Component {
             userName: 'Thomas Johnson',
             clinicIds: [4, 5],
             activeClinic: 4,
+            path: 'improvement',
             updateActiveClinic: this.updateActiveClinic
         }
     }
