@@ -47,6 +47,10 @@ const Layout = props => (
                 #__next {
                     height: 100%;
                 }
+                a {
+                    text-decoration: none;
+                    cursor: pointer;
+                }
             `}
         />
         <Sidebar />

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import IcomoonReact from 'icomoon-react';
+import { colors } from '../utils/ThemeUtils';
 
 import iconSet from '../static/font/selection.json';
 
@@ -14,8 +15,8 @@ Icon.propTypes = {
 };
 
 Icon.defaultProps = {
-  color: '#f00',
   size: '16',
+  color: colors.black
 };
 
 export default Icon;

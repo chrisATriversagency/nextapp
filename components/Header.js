@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 import Link from 'next/link';
+import { LinkTwoWhite } from './Links';
 import { colors } from '../utils/ThemeUtils';
 
 const Header = () => (
@@ -15,13 +16,19 @@ const Header = () => (
         `}
     >
         <Link href="/">
-          <a>Main Site</a>
+            <LinkTwoWhite>
+                Main Site
+            </LinkTwoWhite>
         </Link>
         <Link href="/search">
-          <a>Search</a>
+            <LinkTwoWhite>
+                Search
+            </LinkTwoWhite>
         </Link>
         <Link href="/logout">
-          <a>Log Out</a>
+            <LinkTwoWhite>
+                Log Out
+            </LinkTwoWhite>
         </Link>
     </header>
 )

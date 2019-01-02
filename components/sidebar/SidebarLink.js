@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import { SecondaryLinkStyle } from '../Links';
 import Icon from '../Icon';
 
 const SidebarLink = (props) => (
     <li>
-        <Link href={props.link}>
-            <a>
+        <Link href={props.link} passHref>
+            <SecondaryLinkStyle>
                 <Icon icon="arrow-right-2" />
                 {props.title}
-            </a>
+            </SecondaryLinkStyle>
         </Link>
     </li>
 
