@@ -16,6 +16,7 @@ const Button = styled.button`
     letter-spacing: .038em;
     line-height: 1.267;
     text-transform: uppercase;
+    border: none;
 
     @media (min-width: $md) {
         font-size: 1.5rem;
