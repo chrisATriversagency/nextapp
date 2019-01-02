@@ -31,7 +31,7 @@ const Choice = (props) => (
         <Icon icon="checkmark" />
         <div>Implementation</div>
         <p>For those who are implementing CMM for the first time (initial implementation of CMM).</p>
-        <DefaultLinkStyle>Select this path</DefaultLinkStyle>
+        <DefaultLinkStyle>{props.isActive ? 'Path Selected' : 'Select this path'}</DefaultLinkStyle>
     </div>
 )
 
