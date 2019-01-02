@@ -2,6 +2,7 @@
 import { jsx, css } from '@emotion/core';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import Button from './Button';
 import { colors } from '../utils/ThemeUtils';
 
 const Card = (props) => (
@@ -29,7 +30,7 @@ const Card = (props) => (
                     </p>
                 </div>
                 <div>
-                    <button type="button" name="button">{props.info.buttonText}</button>
+                    <Button variant="purple">{props.info.buttonText}</Button>
                 </div>
             </a>
         </Link>

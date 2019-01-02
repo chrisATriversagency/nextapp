@@ -41,6 +41,8 @@ const Layout = props => (
                     color: ${colors.black};
                     margin: 0;
                     height: 100%;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
                 }
                 #__next {
                     height: 100%;
