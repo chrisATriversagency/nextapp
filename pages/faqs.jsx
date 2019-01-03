@@ -1,8 +1,10 @@
-import Layout from '../components/Layout';
-import PageTitle from '../components/PageTitle';
-import Accordion from '../components/Accordion';
+import React from 'react';
 
 import faqs from '../data/faqs';
+
+import Accordion from '../components/Accordion';
+import Layout from '../components/Layout';
+import PageTitle from '../components/PageTitle';
 
 const Faqs = () => (
     <Layout>

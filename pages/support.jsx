@@ -1,15 +1,17 @@
-import Layout from '../components/Layout';
-import PageTitle from '../components/PageTitle';
-import Card from '../components/Card';
+import React from 'react';
 
 import supportCards from '../data/supportCards';
+
+import Card from '../components/Card';
+import Layout from '../components/Layout';
+import PageTitle from '../components/PageTitle';
 
 const Support = () => (
     <Layout>
         <PageTitle title="Support" copy="Cras diam elit, tempus id egestas a, eleifend et nunc. Proin ipsum risus, lobortis a purus quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
         <div>
-            {supportCards.map((card) => (
-                <Card key={card.id} info={card}/>
+            {supportCards.map(card => (
+                <Card key={card.id} info={card} />
             ))}
         </div>
     </Layout>

@@ -8,10 +8,11 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "/pages/index.js",
+            "program": "server.js",
             "skipFiles": [
               "async_hooks.js",
-              "inspector_async_hooks.js",
+              "inspector_async_hook.js",
+              "timers.js",
               "node_modules/**/*.js"
             ]
         }
