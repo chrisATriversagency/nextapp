@@ -5,6 +5,7 @@ import TwoChoices from './layout/TwoChoices';
 import { DefaultLinkStyle } from './Links';
 import Choice from './Choice';
 import Button from './Button';
+import Modal from './Modal';
 import UserContext from '../context/UserContext';
 
 class ChoosePathModal extends React.Component {
@@ -17,21 +18,23 @@ class ChoosePathModal extends React.Component {
                                 path.toLowerCase().split(' ').map(word => {
                                     return (word.charAt(0).toUpperCase() + word.slice(1));
                                 }).join(' ')
-                            } Path. <DefaultLinkStyle>Need to change your path?</DefaultLinkStyle>
+                            } Path.
                         </h2>
-                        <ContainerBox>
-                            <ContainerBoxHeader
-                                title="Choosing Your Path!"
-                                copy="Lorem ipsum dolo sit amet consectetur."
-                            />
-                            <ContainerBoxContent>
-                                <TwoChoices
-                                    leftChoice={<Choice></Choice>}
-                                    rightChoice={<Choice></Choice>}
+                        <Modal trigger={<DefaultLinkStyle>Need to change your path?</DefaultLinkStyle>}>
+                            <ContainerBox>
+                                <ContainerBoxHeader
+                                    title="Choosing Your Path!"
+                                    copy="Lorem ipsum dolo sit amet consectetur."
                                 />
-                            <Button variant="purple" size="large">Change to Improvement Path</Button>
-                            </ContainerBoxContent>
-                        </ContainerBox>
+                                <ContainerBoxContent>
+                                    <TwoChoices
+                                        leftChoice={<Choice></Choice>}
+                                        rightChoice={<Choice></Choice>}
+                                    />
+                                <Button variant="purple" size="large">Change to Improvement Path</Button>
+                                </ContainerBoxContent>
+                            </ContainerBox>
+                        </Modal>
                     </div>
                 )}
             </UserContext.Consumer>
