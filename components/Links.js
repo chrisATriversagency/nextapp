@@ -3,7 +3,7 @@ import { jsx, css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { colors, breakpoints } from '../utils/ThemeUtils';
 
-const link1 = css`
+export const link1 = css`
     font-weight: 700;
     font-size: 1.4rem;
     letter-spacing: .07em;
@@ -14,7 +14,7 @@ const link1 = css`
     }
 `;
 
-const link1b = css`
+export const link1b = css`
     font-weight: 700;
     font-size: 1.4rem;
     letter-spacing: .07em;
@@ -22,7 +22,7 @@ const link1b = css`
     color: ${colors.darkGrey};
 `;
 
-const link2 = css`
+export const link2 = css`
     font-weight: 700;
     font-size: 1.3rem;
     letter-spacing: .038em;
@@ -31,6 +31,7 @@ const link2 = css`
 
 export const DefaultLinkStyle = styled.a`
     ${link1};
+
     border-bottom: 2px solid ${colors.orange};
     cursor: pointer;
 
@@ -43,24 +44,20 @@ export const DefaultLinkStyle = styled.a`
         font-size: 1.5rem;
     }
 `
-export const SecondaryLinkStyle = props => (
-    <a
-        css={css`
-            ${link1b};
-            color: ${props.color ? props.color : colors.black};
+export const SecondaryLinkStyle = styled.a`
+    ${link1b};
 
-            &:hover,
-            &:focus {
-                color: ${colors.purple};
-            }
-        `}
-    >
-        {props.children}
-    </a>
-)
+    color: ${({ color }) => color ? color : colors.black};
+
+    &:hover,
+    &:focus {
+        color: ${colors.purple};
+    }
+`;
 
 export const LinkTwoWhite = styled.a`
     ${link2};
+
     color: ${colors.white};
     text-transform: uppercase;
 `;

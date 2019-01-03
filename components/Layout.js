@@ -1,12 +1,15 @@
-/** @jsx jsx */
+
+
 import { jsx, Global, css } from '@emotion/core';
 import Head from 'next/head';
-import PageWrapper from './PageWrapper';
-import Header from './Header';
-import Sidebar from './sidebar/Sidebar';
-import Footer from './Footer';
+import React from 'react';
 
 import { fonts, colors } from '../utils/ThemeUtils.js';
+
+import Footer from './Footer';
+import Header from './Header';
+import PageWrapper from './PageWrapper';
+import Sidebar from './sidebar/Sidebar';
 
 const Layout = props => (
     <PageWrapper>

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 
-class Modal extends React.Component {
+class Modal extends React.PureComponent {
     constructor(props) {
         super(props);
 

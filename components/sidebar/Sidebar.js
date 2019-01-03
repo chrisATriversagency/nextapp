@@ -10,7 +10,16 @@ import UserContext from '../../context/UserContext';
 
 import sidebarNav from '../../data/sidebarNav';
 
+
 class Sidebar extends React.Component {
+    // async componentWillMount() {
+    //     const menu = await Api.fetchMenu();
+    //
+    //     this.setState(() => {
+    //         menu
+    //     });
+    // }
+    //
     render() {
         return (
             <aside
@@ -29,13 +38,13 @@ class Sidebar extends React.Component {
                     <header>
                         <h2>Comprehensive Medication Management</h2>
                         <div>
-                            Implementation System
+                            {'Implementation System'}
                         </div>
                     </header>
                     <div>
                         <div>
                             <UserContext.Consumer>
-                                {({userName, clinicIds, activeClinic}) => (
+                                {({ loading, userName, clinicIds, activeClinic}) => (
                                     <div>
                                         <User userName={userName} currentClinic={activeClinic} />
                                         <SidebarClinicList clinicIds={clinicIds} />

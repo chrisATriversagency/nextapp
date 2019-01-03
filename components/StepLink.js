@@ -4,19 +4,19 @@ import Link from 'next/link'
 const StepLink = props => (
     <li>
         <article>
-            <Link href={`/step?title=${props.step.title}`}>
+            <Link href={`/step?title=${props.title}`}>
                 <a>
                     <div>
                         <div>
-                            <img src={props.step.icon} alt="" />
+                            <img src={props.icon} alt="" />
                         </div>
-                        <h2>{props.step.title}</h2>
+                        <h2>{props.title}</h2>
                         <p>
-                            {props.step.copy}
+                            {props.copy}
                         </p>
                     </div>
                     <div>
-                        {props.step.number}
+                        {props.number}
                     </div>
                 </a>
             </Link>
@@ -25,12 +25,10 @@ const StepLink = props => (
 )
 
 StepLink.propTypes = {
-    step: PropTypes.shape({
-        icon: PropTypes.string,
-        title: PropTypes.string,
-        copy: PropTypes.string,
-        number: PropTypes.string,
-    })
+    icon: PropTypes.string,
+    title: PropTypes.string,
+    copy: PropTypes.string,
+    number: PropTypes.string
 }
 
 export default StepLink

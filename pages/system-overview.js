@@ -12,11 +12,8 @@ const SystemOverview = props => (
         <PageTitle title="A Blueprint for Implementation and Improvement of CMM" copy="A step-by-step guide to facilitate quality implementation and improvement of CMM that is grounded in implementation science theory and refined with evidence-based learnings from the CMM in Primary Care Study." />
         <ChoosePathModal />
         <ul>
-            {steps.map((step) => (
-                <StepLink
-                    step={step}
-                    key={step.number}
-                />
+            {steps.map(({ id, ...step }) => (
+                <StepLink {...step} key={id} />
             ))}
         </ul>
     </Layout>

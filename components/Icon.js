@@ -4,8 +4,8 @@ import { colors } from '../utils/ThemeUtils';
 
 import iconSet from '../static/font/selection.json';
 
-const Icon = props => (
-    <IcomoonReact iconSet={iconSet} color={props.color} size={props.size} icon={props.icon} />
+const Icon = ({ color, size, icon }) => (
+    <IcomoonReact {...{ iconSet, color, size, icon }} />
 );
 
 Icon.propTypes = {
