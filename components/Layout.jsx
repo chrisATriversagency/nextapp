@@ -1,17 +1,15 @@
-
-
-import { jsx, Global, css } from '@emotion/core';
+import { Global, css } from '@emotion/core';
 import Head from 'next/head';
 import React from 'react';
 
-import { fonts, colors } from '../utils/ThemeUtils.js';
+import { fonts, colors } from '../utils/ThemeUtils';
 
 import Footer from './Footer';
 import Header from './Header';
 import PageWrapper from './PageWrapper';
 import Sidebar from './sidebar/Sidebar';
 
-const Layout = props => (
+const Layout = ({ children }) => (
     <PageWrapper>
         <Head>
             <title>Page Title</title>
@@ -63,10 +61,10 @@ const Layout = props => (
                 gridArea: 'content'
             }}
         >
-            {props.children}
+            {children}
         </main>
         <Footer />
     </PageWrapper>
 )
 
-export default Layout
+export default Layout;

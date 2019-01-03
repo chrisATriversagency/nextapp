@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { colors, breakpoints } from '../utils/ThemeUtils';
 
@@ -43,11 +42,12 @@ export const DefaultLinkStyle = styled.a`
     @media (min-width: ${breakpoints.lg}) {
         font-size: 1.5rem;
     }
-`
+`;
+
 export const SecondaryLinkStyle = styled.a`
     ${link1b};
 
-    color: ${({ color }) => color ? color : colors.black};
+    color: ${({ color }) => color || colors.black};
 
     &:hover,
     &:focus {

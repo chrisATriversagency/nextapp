@@ -1,33 +1,27 @@
-import SidebarClinic from './SidebarClinic';
-import Button from '../Button';
+import React, { Component } from 'react';
 import AnimateHeight from 'react-animate-height';
+
+import Button from '../Button';
+import SidebarClinic from './SidebarClinic';
 
 import sidebarClinics from '../../data/sidebarClinics';
 
-class SidebarClinicList extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isOpen: false,
-        };
+class SidebarClinicList extends Component {
+    state = {
+        isOpen: false
+    };
 
-        this.handelButtonClick = this.handelButtonClick.bind(this);
-    }
-
-    handelButtonClick() {
-        this.setState(prevState => {
-            return {
-                isOpen: !prevState.isOpen
-            }
-        });
-    }
+    handelButtonClick = () => {
+        this.setState(prevState => ({ isOpen: !prevState.isOpen }));
+    };
 
     render() {
+        const { isOpen } = this.state;
         return (
             <div>
                 <AnimateHeight
-                    duration={ 500 }
-                    height={ this.state.isOpen ? 'auto' : 0 }
+                    duration={500}
+                    height={isOpen ? 'auto' : 0}
                 >
                     <ul>
                         {sidebarClinics.map((clinic) => {

@@ -1,15 +1,16 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
+import styled from '@emotion/styled';
+import React from 'react';
+
 import SocialList from './SocialList';
 
 import socialLinks from '../data/socialLinks';
 
+const FooterElement = styled.footer`
+    gridArea: 'footer'
+`;
+
 const Footer = () => (
-    <footer
-        css={{
-            gridArea: 'footer'
-        }}
-    >
+    <FooterElement>
         <div className="signup-footer__side signup-footer__side--one">
             <div className="signup-footer__side-item">
                 <SocialList links={socialLinks} />
@@ -51,7 +52,7 @@ const Footer = () => (
                 <i className="icon icon-arrow-left"></i>
             </a>
         </div>
-    </footer>
+    </FooterElement>
 );
 
 export default Footer;

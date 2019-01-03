@@ -1,12 +1,12 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import Link from 'next/link';
+import React from 'react';
 
+import SidebarClinicList from './SidebarClinicList';
 import SidebarNavSection from './SidebarNavSection';
 import User from './User';
-import SidebarClinicList  from './SidebarClinicList';
+
 import { colors } from '../../utils/ThemeUtils';
-import UserContext from '../../context/UserContext';
 
 import sidebarNav from '../../data/sidebarNav';
 
@@ -30,8 +30,8 @@ class Sidebar extends React.Component {
                 `}
             >
                 <div className="mobile-toggle">
-                    <i className="icon-hamburger"></i>
-                    <i className="icon-close"></i>
+                    <i className="icon-hamburger" />
+                    <i className="icon-close" />
                     <span className="mobile-toggle__text">Menu</span>
                 </div>
                 <div>
@@ -43,14 +43,10 @@ class Sidebar extends React.Component {
                     </header>
                     <div>
                         <div>
-                            <UserContext.Consumer>
-                                {({ loading, userName, clinicIds, activeClinic}) => (
-                                    <div>
-                                        <User userName={userName} currentClinic={activeClinic} />
-                                        <SidebarClinicList clinicIds={clinicIds} />
-                                    </div>
-                                )}
-                            </UserContext.Consumer>
+                            <div>
+                                <User userName={userName} currentClinic={activeClinic} />
+                                <SidebarClinicList clinicIds={clinicIds} />
+                            </div>
                         </div>
                         {sidebarNav.map((section) => (
                             <SidebarNavSection key={section.id} title={section.title} links={section.links} />

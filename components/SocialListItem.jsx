@@ -1,14 +1,23 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import Icon from './Icon';
 
-const SocialListItem = props => (
+const SocialListItem = ({
+    link,
+    icon
+}) => (
     <li>
-        <a href={props.link}>
-            <Icon icon={props.icon} />
+        <a href={link}>
+            <Icon icon={icon} />
         </a>
     </li>
 );
+
+SocialListItem.defaultProps = {
+    link: '',
+    icon: ''
+};
 
 SocialListItem.propTypes = {
     link: PropTypes.string,

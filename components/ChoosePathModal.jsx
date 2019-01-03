@@ -1,11 +1,13 @@
-import ContainerBox from './ContainerBox';
-import ContainerBoxHeader from './ContainerBoxHeader';
-import ContainerBoxContent from './ContainerBoxContent';
-import TwoChoices from './layout/TwoChoices';
-import { DefaultLinkStyle } from './Links';
-import Choice from './Choice';
+import React from 'react';
+
 import Button from './Button';
+import ContainerBox from './ContainerBox';
+import ContainerBoxContent from './ContainerBoxContent';
+import Choice from './Choice';
+import ContainerBoxHeader from './ContainerBoxHeader';
+import { DefaultLinkStyle } from './Links';
 import Modal from './Modal';
+import TwoChoices from './layout/TwoChoices';
 import UserContext from '../context/UserContext';
 
 class ChoosePathModal extends React.Component {

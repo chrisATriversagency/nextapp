@@ -1,11 +1,11 @@
-// import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import React from 'react';
 
-import { SecondaryLinkStyle } from '../Links';
 import Icon from '../Icon';
+import { SecondaryLinkStyle } from '../Links';
 
-const SidebarLink = ({ text: children, ...linkProps }) => (
+const SidebarLink = ({ children, ...linkProps }) => (
     <li>
         <Link {...linkProps} passHref>
             <SecondaryLinkStyle>
@@ -17,8 +17,7 @@ const SidebarLink = ({ text: children, ...linkProps }) => (
 );
 
 SidebarLink.propTypes = {
-    link: PropTypes.string,
-    title: PropTypes.string
-}
+    children: PropTypes.string.isRequired
+};
 
 export default SidebarLink;

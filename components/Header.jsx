@@ -1,20 +1,21 @@
-/** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import styled from '@emotion/styled';
 import Link from 'next/link';
+import React from 'react';
+
 import { LinkTwoWhite } from './Links';
 import { colors } from '../utils/ThemeUtils';
 
+const HeaderElement = styled.header`
+    grid-area: header;
+    background-image: ${colors.headerGradient};
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+`;
+
 const Header = () => (
-    <header
-        css={css`
-            grid-area: header;
-            background-image: ${colors.headerGradient};
-            padding: 30px;
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-        `}
-    >
+    <HeaderElement>
         <Link href="/">
             <LinkTwoWhite>
                 Main Site
@@ -30,7 +31,7 @@ const Header = () => (
                 Log Out
             </LinkTwoWhite>
         </Link>
-    </header>
-)
+    </HeaderElement>
+);
 
 export default Header;

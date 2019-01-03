@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import { colors } from '../utils/ThemeUtils';
+import React from 'react';
 
 const ContainerBoxHeader = () => (
     <footer>Footer</footer>
