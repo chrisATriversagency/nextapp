@@ -1,32 +1,38 @@
 // https://alligator.io/react/react-accordion-component/
 
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
 import AccordionSection from './AccordionSection';
 
-class Accordion extends React.Component {
+class Accordion extends Component {
+    static defaultProps = {
+        allowMultipleOpen: false
+    };
+
     static propTypes = {
         allowMultipleOpen: PropTypes.bool,
-        children: PropTypes.instanceOf(Object).isRequired,
+        children: PropTypes.instanceOf(Object).isRequired
     };
 
     constructor(props) {
         super(props);
 
         const openSections = {};
+        const { children } = this.props;
         this.state = { openSections };
 
-        this.props.children.forEach(child => {
+        children.forEach((child) => {
             if (child.props.isOpen) {
                 openSections[child.props.id] = true;
             }
         });
     }
 
-    onClick = id => {
+    onClick = (id) => {
         const {
             props: { allowMultipleOpen },
-            state: { openSections },
+            state: { openSections }
         } = this;
 
         const isOpen = !!openSections[id];
@@ -35,7 +41,7 @@ class Accordion extends React.Component {
             this.setState({
                 openSections: {
                     ...openSections,
-                    [id]: !isOpen,
+                    [id]: !isOpen
                 }
             });
         } else {
@@ -51,7 +57,7 @@ class Accordion extends React.Component {
         const {
             onClick,
             props: { children },
-            state: { openSections },
+            state: { openSections }
         } = this;
 
         return (
@@ -63,7 +69,7 @@ class Accordion extends React.Component {
                         onClick={onClick}
                         key={child.props.id}
                         id={child.props.id}
-                        >
+                    >
                         {child.props.children}
                     </AccordionSection>
                 ))}

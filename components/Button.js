@@ -5,9 +5,27 @@ import { colors } from '../utils/ThemeUtils';
 const Button = styled.button`
     transition: transform .2s ease, box-shadow .2s ease;
     cursor: pointer;
-    color: ${props => props.variant === 'white' ? colors.purple : colors.white};
-    background-color: ${props => props.variant === 'white' ? colors.white : colors[props.variant]};
-    width: ${props => props.block ? '100%' : 'auto'};
+    color: ${({ variant }) => {
+        if (variant === 'white') {
+            return colors.purple;
+        } else {
+            return colors.white;
+        }
+    }};
+    background-color: ${({ variant }) => {
+        if (variant === 'white') {
+            return colors.white;
+        } else {
+            return colors[variant];
+        }
+    }};
+    width: ${({ block }) => {
+        if (block) {
+            return '100%';
+        } else {
+            return 'auto';
+        }
+    }};
     box-shadow: ${colors.boxShadowButton};
     padding: 11px 23px;
     border-radius: 27px;
@@ -30,19 +48,19 @@ const Button = styled.button`
     }
 `;
 
+Button.defaultProps = {
+    variant: 'white',
+    size: 'default',
+    block: false,
+    type: 'button'
+};
+
 Button.propTypes = {
     variant: PropTypes.string,
     size: PropTypes.string,
     block: PropTypes.bool,
     href: PropTypes.string,
-    type: PropTypes.oneOf(['button', 'reset', 'submit', null]),
-};
-
-Button.defaultProps = {
-    variant: 'white',
-    size: 'default',
-    block: false,
-    type: 'button',
+    type: PropTypes.oneOf(['button', 'reset', 'submit', null])
 };
 
 export default Button;

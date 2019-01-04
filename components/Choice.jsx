@@ -6,8 +6,20 @@ import { DefaultLinkStyle } from './Links';
 import Icon from './Icon';
 
 const Div = styled.div`
-    color: ${props.isActive ? colors.white : colors.$black};
-    background-color: ${props.isActive ? colors.purple : colors.white};
+    color: ${({ isActive }) => {
+        if (isActive) {
+            return colors.white;
+        } else {
+            return colors.black;
+        }
+    }};
+    background-color: ${({ isActive }) => {
+        if (isActive) {
+            return colors.purple;
+        } else {
+            return colors.white;
+        }
+    }};
     cursor: pointer;
     text-align: center;
     border-radius: 4px;

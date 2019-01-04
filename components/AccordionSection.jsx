@@ -1,6 +1,7 @@
 // https://alligator.io/react/react-accordion-component/
 
 import PropTypes from 'prop-types';
+import React from 'react';
 import AnimateHeight from 'react-animate-height';
 
 class AccordionSection extends React.Component {
@@ -9,41 +10,35 @@ class AccordionSection extends React.Component {
         isOpen: PropTypes.bool.isRequired,
         label: PropTypes.string.isRequired,
         onClick: PropTypes.func.isRequired,
-        id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+        id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired
     };
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            height: 0,
-        };
-    }
-
     onClick = () => {
-        this.props.onClick(this.props.id);
+        const { id, onClick } = this.props;
+        onClick(id);
     };
 
     render() {
         const {
             onClick,
-            props: { isOpen, label, id },
+            props: { isOpen, label, children }
         } = this;
 
         return (
             <div>
-                <div onClick={onClick}>
+                <button type="button" onClick={onClick}>
                     {label}
-                </div>
+                </button>
                 <AnimateHeight
-                    duration={ 500 }
-                    height={ isOpen ? 'auto' : 0 }
+                    duration={500}
+                    height={isOpen ? 'auto' : 0}
                 >
                     <div>
-                        {this.props.children}
+                        {children}
                     </div>
                 </AnimateHeight>
             </div>
-        )
+        );
     }
 }
 
