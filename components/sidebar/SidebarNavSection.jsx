@@ -21,7 +21,7 @@ SidebarNavSection.defaultProps = {
 
 SidebarNavSection.propTypes = {
     title: PropTypes.string,
-    links: PropTypes.typeOf(Array)
+    links: PropTypes.instanceOf(Array)
 };
 
 export default SidebarNavSection;

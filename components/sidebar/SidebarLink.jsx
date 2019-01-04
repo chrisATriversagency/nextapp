@@ -5,19 +5,19 @@ import React from 'react';
 import Icon from '../Icon';
 import { SecondaryLinkStyle } from '../Links';
 
-const SidebarLink = ({ children, ...linkProps }) => (
+const SidebarLink = ({ text, ...linkProps }) => (
     <li>
         <Link {...linkProps} passHref>
             <SecondaryLinkStyle>
                 <Icon icon="arrow-right-2" />
-                <span>{children}</span>
+                <span>{text}</span>
             </SecondaryLinkStyle>
         </Link>
     </li>
 );
 
 SidebarLink.propTypes = {
-    children: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired
 };
 
 export default SidebarLink;

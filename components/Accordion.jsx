@@ -74,7 +74,7 @@ class Accordion extends Component {
                     </AccordionSection>
                 ))}
             </div>
-        )
+        );
     }
 }
 

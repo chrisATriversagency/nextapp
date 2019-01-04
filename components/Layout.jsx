@@ -1,5 +1,6 @@
 import { Global, css } from '@emotion/core';
 import Head from 'next/head';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import { fonts, colors } from '../utils/ThemeUtils';
@@ -65,6 +66,14 @@ const Layout = ({ children }) => (
         </main>
         <Footer />
     </PageWrapper>
-)
+);
+
+Layout.defaultProps = {
+    children: <div />
+};
+
+Layout.propTypes = {
+    children: PropTypes.node
+};
 
 export default Layout;

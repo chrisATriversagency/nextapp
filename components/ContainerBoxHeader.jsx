@@ -28,7 +28,7 @@ ContainerBoxHeader.defaultProps = {
     title: '',
     subTitle: '',
     copy: '',
-    note: '',
+    note: ''
 };
 
 ContainerBoxHeader.propTypes = {
