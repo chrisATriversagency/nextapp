@@ -1,11 +1,12 @@
 import { Global, css } from '@emotion/core';
 import Head from 'next/head';
+import 'normalize.css';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import { fonts, colors } from '../utils/ThemeUtils';
 
-import Footer from './Footer';
+import Footer from './footer/Footer';
 import Header from './Header';
 import PageWrapper from './PageWrapper';
 import Sidebar from './sidebar/Sidebar';

@@ -31,7 +31,11 @@ export const fonts = {
 export const breakpoints = {
     xs: 0,
     sm: '480px',
+    smMax: '479px',
     md: '768px',
+    mdMax: '767px',
     lg: '1024px',
-    xl: '1280px'
+    lgMax: '1023px',
+    xl: '1280px',
+    xlMax: '1279'
 };

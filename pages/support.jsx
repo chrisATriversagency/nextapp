@@ -1,6 +1,6 @@
 import React from 'react';
 
-import supportCards from '../data/supportCards';
+import supportCards from '../static/data/supportCards';
 
 import Card from '../components/Card';
 import Layout from '../components/Layout';

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import steps from '../data/steps';
+import steps from '../static/data/steps';
 
 import ChoosePathModal from '../components/ChoosePathModal';
 import Layout from '../components/Layout';

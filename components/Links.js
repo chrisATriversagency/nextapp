@@ -61,3 +61,10 @@ export const LinkTwoWhite = styled.a`
     color: ${colors.white};
     text-transform: uppercase;
 `;
+
+export const SmallLink = styled.a`
+    color: $footer-grey;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    font-weight: 700;
+`;

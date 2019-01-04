@@ -1,6 +1,6 @@
 import React from 'react';
 
-import faqs from '../data/faqs';
+import faqs from '../static/data/faqs';
 
 import Accordion from '../components/Accordion';
 import Layout from '../components/Layout';

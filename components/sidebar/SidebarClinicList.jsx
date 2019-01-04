@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import AnimateHeight from 'react-animate-height';
 
 import Button from '../Button';
+import UnstyledList from '../UnstyledList';
+
 import SidebarClinic from './SidebarClinic';
 
 class SidebarClinicList extends Component {
@@ -42,11 +44,11 @@ class SidebarClinicList extends Component {
                     duration={500}
                     height={isOpen ? 'auto' : 0}
                 >
-                    <ul>
+                    <UnstyledList>
                         {clinics.map(clinic => (
                             <SidebarClinic key={clinic.id} name={clinic.name} id={clinic.id} />
                         ))}
-                    </ul>
+                    </UnstyledList>
                 </AnimateHeight>
                 <div>
                     <Button onClick={this.handelButtonClick} variant="purple" size="small">Change Clinic</Button>
